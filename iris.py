@@ -76,6 +76,12 @@ plt.title('Petal-Length By species')
 sns.violinplot(data = df, x = 'species', y = 'petal-length')
 petalLengthspeciesViolin.savefig(graph_folder_path + 'petalLengthspeciesViolin.png')
 
+#make another one for sepal length
+sepalLengthSpeciesViolin = plt.figure()
+plt.title('Sepal-Length By species')
+sns.violinplot(data = df, x = 'species', y = 'sepal-length')
+sepalLengthSpeciesViolin.savefig(graph_folder_path + 'sepalLengthViolin.png')
+
 #plot scatter plot matrix
 scatterMatrix = plt.figure()
 plt.title('Scatter Plot Matrix')
@@ -110,6 +116,7 @@ petal = df[['petal-length', 'petal-width', 'species']]
 sepal = df[['sepal-length', 'sepal-width', 'species']]
 
 #split the data into a training and testing section again
+#petals
 train_petal, test_petal = train_test_split(petal, test_size = 0.3, random_state = 0)
 train_petal_x = train_petal[['petal-length', 'petal-width']]
 train_petal_y = train_petal['species']
@@ -117,6 +124,7 @@ train_petal_y = train_petal['species']
 test_petal_x = test_petal[['petal-length', 'petal-width']]
 test_petal_y = test_petal['species']
 
+#sepals
 train_sepal, test_sepal = train_test_split(sepal, test_size = 0.3, random_state = 0)
 train_sepal_x = train_sepal[['sepal-length', 'sepal-width']]
 train_sepal_y = train_sepal['species']
