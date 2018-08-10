@@ -95,8 +95,8 @@ train, test = train_test_split(df, test_size = 0.3)
 train_x = train[['sepal-length', 'sepal-width', 'petal-length', 'petal-width']]
 train_y = train['species']
 
-test_x = train[['sepal-length', 'sepal-width', 'petal-length', 'petal-width']]
-test_y = train['species']
+test_x = test[['sepal-length', 'sepal-width', 'petal-length', 'petal-width']]
+test_y = test['species']
 
 #double check everything came out correctly
 print(train.head)
